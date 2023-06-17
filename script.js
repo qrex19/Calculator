@@ -42,15 +42,17 @@ openBracket.addEventListener('click', function run() {
     input.value = input.value + '(';
 });
 
+//feature: clear the end part of the box only!
 clear.addEventListener('click', function run() {
 
     if(check()) emptyTheInputBox();
 
-      input.value = '';
+    input.value = input.value.slice(0, input.value.length - 1);
 
     
 
 });
+
 
 equal.addEventListener('click', function solutionAlgo() {
 
