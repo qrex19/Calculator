@@ -37,10 +37,35 @@ function emptyTheInputBox() { //empty's the input box
 
 openBracket.addEventListener('click', function run() {
 
-    if(check()) emptyTheInputBox();
+    if(check()) emptyTheInputBox(); //if check() returns true, then empty the input box
 
     input.value = input.value + '(';
 });
+
+clear.addEventListener('click', function run() {
+
+    if(check()) emptyTheInputBox();
+
+      input.value = '';
+
+    
+
+});
+
+equal.addEventListener('click', function solutionAlgo() {
+
+    "use strict";
+
+    if(check()) emptyTheInputBox();
+
+    
+    input.value = eval(input.value);
+
+    mode = false;
+    
+});
+
+
 
 closeBracket.addEventListener('click', function run() {
 
@@ -49,12 +74,7 @@ closeBracket.addEventListener('click', function run() {
     input.value = input.value + ')';
 });
 
-clear.addEventListener('click', function run() {
 
-    if(check()) emptyTheInputBox();
-
-    input.value = '';
-})
 
 multiply.addEventListener('click', function run() {
 
@@ -175,13 +195,3 @@ zero.addEventListener('click', function run() {
     input.value = input.value + "0";
 });
 
-equal.addEventListener('click', function solutionAlgo() {
-
-    if(check()) emptyTheInputBox();
-
-
-    input.value = eval(input.value);
-
-    mode = false;
-    
-});
